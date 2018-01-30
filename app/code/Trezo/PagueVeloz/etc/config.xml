@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <pagueveloz>
+                <active>0</active>
+                <title><![CDATA[Boleto Bancário]]></title>
+                <payment_action>authorize</payment_action>
+                <order_status>pending</order_status>
+                <expiration_days><![CDATA[2]]></expiration_days>
+                <enable_email>1</enable_email>
+                <aditional_days_to_transaction_expiration><![CDATA[1]]></aditional_days_to_transaction_expiration>
+                <cancellation_email_template>pagueveloz_cancellation_email_template</cancellation_email_template>
+                <model>Trezo\PagueVeloz\Model\Payment</model>
+                <group>pagueveloz</group>
+            </pagueveloz>
+        </payment>
+    </default>
+</config>
+

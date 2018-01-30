@@ -1,0 +1,4 @@
+]<?php if($this->canShowBoleto()): ?>
+	<br />
+	<button id="pagueveloz-boleto-button-print" type="button" class="action primary checkout" title="Print PagueVeloz Boleto" onclick="window.open('<?php echo $block->getBoletoPrintUrl() ?>', '_blank')"><?php echo __('Print your Boleto') ?></button>
+<?php endif; ?>

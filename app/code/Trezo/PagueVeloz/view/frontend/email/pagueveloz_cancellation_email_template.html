@@ -1,0 +1,12 @@
+<!--@subject Pedido cancelado por falta de pagamento@-->
+{{template config_path="design/email/header_template"}}
+<table border="0" cellpadding="20" cellspacing="0" class="100p" width="640">
+  <tr>
+    <td align="left" class="font-bump" style="font-size:14px; color:#333333; font-family:Arial, Helvetica, sans-serif;">
+      Como nosso sistema não recebeu a confirmação de pagamento do boleto até a data de vencimento, informamos que seu pedido número <strong>{{var data.order_id}}</strong> foi automaticamente cancelado.<br><br>
+      Lembramos que boletos pagos após o vencimento não são reconhecidos pelo sistema.<br>
+      Para realizar um novo pedido, por favor acesse <a href='{{config path="web/unsecure/base_url"}}' style="color:#ff0080; white-space: nowrap">{{config path="general/store_information/name"}}</a>.
+    </td>
+  </tr>
+</table>
+{{template config_path="design/email/footer_template"}}

@@ -1,0 +1,8 @@
+<dl class="payment-method">
+    <dt class="title"><strong><?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?></strong></dt>
+<?php if ($block->getPagueVelozInfos()) : ?>
+    <dd class="content">
+        <a title="Print PagueVeloz Boleto" href="<?php echo $block->getBoletoPrintUrl() ?>" target="_blank"><?php echo __('Print your second Boleto') ?></a>
+    </dd>
+<?php endif; ?>
+</dl>

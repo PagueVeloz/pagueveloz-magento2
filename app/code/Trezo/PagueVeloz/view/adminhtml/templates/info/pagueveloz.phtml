@@ -1,0 +1,10 @@
+<dl class="payment-method">
+    <dt class="title"><strong><?php echo $block->escapeHtml($block->getMethod()->getTitle()) ?></strong></dt>
+<?php if ($block->getPagueVelozInfos()) : ?>
+    <dd class="content">
+	    <br />
+	    <button type="button" class="action-default scalable action-save action-secondary" onclick="window.open('<?php echo $block->getPagueVelozInfos() ?>', '_blank')"><?php echo __('Verify Payment Status') ?></button>
+	    <button id="pagueveloz-boleto-button-print" type="button" class="action" title="Print PagueVeloz Boleto" onclick="window.open('<?php echo $block->getBoletoPrintUrl() ?>', '_blank')"><?php echo __('Print your Boleto') ?></button>
+    </dd>
+<?php endif; ?>
+</dl>

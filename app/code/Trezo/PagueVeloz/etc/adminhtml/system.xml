@@ -1,0 +1,79 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="pagueveloz" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>PagueVeloz - Boleto</label>
+                <comment>
+                    <![CDATA[PagueVeloz - Boleto]]>
+                </comment>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="email" translate="label" type="text" sortOrder="42" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email</label>
+                </field>
+                <field id="token" translate="label" type="text" sortOrder="43" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Token</label>
+                </field>
+                <field id="expiration_days" translate="label" type="text" sortOrder="44" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Qty of days to expire</label>
+                </field>
+                <field id="aditional_days_to_transaction_expiration" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Qty of additional days to expire</label>
+                </field>
+                <field id="obsadd2" translate="label" type="text" sortOrder="46" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Observation 2</label>
+                </field>
+                <field id="pdf_enabled" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Gerar PDF</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allowspecific" translate="label" type="allowspecific" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="61" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+                <field id="order_status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="select">
+                    <label>New Order Status</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status\NewStatus</source_model>
+                </field>
+                <field id="cancellation_email_template" type="select" sortOrder="71" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cancellation Email Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="enable_email" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Admin Erros Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Enable warnings to administrator references to errors in automatic ticket approval (divergent value and other errors)]]></comment>
+                </field>
+                <field id="email_name" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sender Name</label>
+                </field>
+                <field id="email_to" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send To</label>
+                </field>
+                <field id="holidays" translate="label comment tooltip" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="0">
+                                        <label>Holidays</label>
+                                        <frontend_model>Trezo\PagueVeloz\Block\Adminhtml\System\Config\Form\Field\Holiday</frontend_model>
+                                        <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                                        <comment>
+                                            <![CDATA[Para o campo "Data do feriado", o formato 25/12 deverá ser usado. Para o campo "Descrição do feriado", uma descrição identificando o feriado pode ser inserida]]>
+                                        </comment>
+                                        <tooltip><![CDATA[Holidays map to be added to business days and ticket expiration. The date should be in the 25/12 format for Christmas, for example.]]></tooltip>
+
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
+

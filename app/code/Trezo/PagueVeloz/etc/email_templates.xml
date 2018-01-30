@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+	<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="trezo_pagueveloz_cron" label="PagueVeloz Email" file="pagueveloz_boleto_admin_email.html" type="html" module="Trezo_PagueVeloz" area="frontend"/>
+    <template id="payment_us_pagueveloz_cancellation_email_template" label="PagueVeloz Cancelation Email" file="pagueveloz_cancellation_email_template.html" type="html" module="Trezo_PagueVeloz" area="frontend"/>
+    <template id="payment_other_pagueveloz_cancellation_email_template" label="PagueVeloz Cancelation Email" file="pagueveloz_cancellation_email_template.html" type="html" module="Trezo_PagueVeloz" area="frontend"/>
+</config>

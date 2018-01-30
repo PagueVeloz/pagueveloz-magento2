@@ -1,0 +1,17 @@
+<!--@subject Atencao: Pedido com valor divergente no PagueVeloz!@-->
+<!--@vars {
+"var data.paguevelozOrder":"PagueVeloz Order",
+"var data.magentoOrder":"Magento Order"
+"var data.paymentSituation":"Payment Situation"
+"var data.paidAmount":"Paid Amount"
+} @-->
+
+{{template config_path="design/email/header_template"}} <!-- path of template header-->
+
+Atencao: Pedido com valor divergente no PagueVeloz! <br/>
+Pedido no PagueVeloz: {{var data.paguevelozOrder|raw}} <br/>
+Pedido na Loja: {{var data.magentoOrder|raw}} <br/>
+Situação Pagamento: {{var data.paymentSituation|raw}} <br/>
+Valor pago: {{var data.paidAmount|raw}}
+
+{{template config_path="design/email/footer_template"}} <!--footer of template-->
